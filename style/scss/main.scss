@@ -61,3 +61,22 @@ body, html {
         opacity: 1;
     }
 }
+.scroll {
+    position: fixed;
+    color: white;
+    font-size: 20px;
+    bottom: 0;
+    opacity: 1;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 29px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all.5s ease-in-out;
+    transition: all .5s ease-in-out;
+    &.gone {
+        bottom: -45px;
+        opacity: 0;
+    }
+}
