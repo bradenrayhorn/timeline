@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Timeline</title>
+        <link rel="stylesheet" href="style/main.css?v=0.13956900 1486848438" />
+        <link href="https://fonts.googleapis.com/css?family=Sahitya:400,700" rel="stylesheet">
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
+    </head>
+    <body>
+        <img src="images/one.jpg" class="bg start" id="img">
+        <img src="images/two.jpg" class="bg" id="img2">
+        <div class="front">
+            <div class="dates">
+                <div class='entry' id='t1000'><div class='time'>1000<span> B.C.</span></div>
+        <div class='content'>Inhabited</div>
+        <div class='content'>Visited the new land</div>
+        <div class='content'>&nbsp;</div>
+        </div><div class='entry' id='t900'><div class='time'>900<span> </span></div>
+        <div class='content'>Settled the lake region</div>
+        <div class='content'>&nbsp;</div>
+        <div class='content'>Went to Australia</div>
+        </div><div class='entry' id='t800'><div class='time'>800<span> </span></div>
+        <div class='content'>Traveled to the New World</div>
+        <div class='content'>&nbsp;</div>
+        <div class='content'>Went to Australia</div>
+        </div><div class='entry' id='t700'><div class='time'>700<span> </span></div>
+        <div class='content'>Settled the lake region</div>
+        <div class='content'>&nbsp;</div>
+        <div class='content'>Went to Australia</div>
+        </div><div class='entry' id='t600'><div class='time'>600<span> </span></div>
+        <div class='content'>Settled the lake region</div>
+        <div class='content'>&nbsp;</div>
+        <div class='content'>Went to Australia</div>
+        </div><div class='entry' id='t500'><div class='time'>500<span> </span></div>
+        <div class='content'>Settled the lake region</div>
+        <div class='content'>&nbsp;</div>
+        <div class='content'>Went to Australia</div>
+        </div>
+            </div>
+        </div>
+        <!--Javascript-->
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/tweenmax.js"></script>
+        <script>
+            // States: 1 (inside) 0 (outside)
+            var controller = new ScrollMagic.Controller({vertical: false});
+            var scene2 = new ScrollMagic.Scene({triggerElement: "#t600"})
+					//.addIndicators()
+                    .on("enter leave", function (e) {
+                        var state = (e.type == "enter" ? 1 : 0);
+                        if(state == 1) {
+                            $("#img2").css("opacity", "1");
+                        } else {
+                            $("#img2").css("opacity", "0");
+                        }
+					})
+					.addTo(controller);
+
+            // Horizontal Scrolling
+            var mouseWheelEvt = function (event) {
+                if (document.body.doScroll)
+                    document.body.doScroll(event.wheelDelta>0?"left":"right");
+                else if ((event.wheelDelta || event.detail) > 0)
+                    document.body.scrollLeft -= 30;
+                else
+                    document.body.scrollLeft += 30;
+
+                return false;
+            }
+            document.body.addEventListener("mousewheel", mouseWheelEvt);
+        </script>
+    </body>
+</html>
