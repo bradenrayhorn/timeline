@@ -1,8 +1,9 @@
 <html>
     <head>
         <title>Timeline</title>
-        <link rel="stylesheet" href="style/main.css?v=0.62916400 1486849748" />
+        <link rel="stylesheet" href="style/main.css?v=0.37115900 1486850931" />
         <link href="https://fonts.googleapis.com/css?family=Sahitya:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
     </head>
@@ -38,13 +39,14 @@
         </div>
             </div>
         </div>
+        <div class="scroll" id="scroll"><i class="fa fa-chevron-right fa-2x"></i></div>
         <!--Javascript-->
         <script type="text/javascript" src="scripts/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/tweenmax.js"></script>
         <script>
             // States: 1 (inside) 0 (outside)
             var controller = new ScrollMagic.Controller({vertical: false});
-            var scene2 = new ScrollMagic.Scene({triggerElement: "#t600"})
+            new ScrollMagic.Scene({triggerElement: "#t600"})
 					//.addIndicators()
                     .on("enter leave", function (e) {
                         var state = (e.type == "enter" ? 1 : 0);
@@ -52,6 +54,17 @@
                             $("#img2").css("opacity", "1");
                         } else {
                             $("#img2").css("opacity", "0");
+                        }
+					})
+					.addTo(controller);
+            new ScrollMagic.Scene({triggerElement: "#t1000"})
+					//.addIndicators()
+                    .on("enter leave", function (e) {
+                        var state = (e.type == "enter" ? 1 : 0);
+                        if(state == 1) {
+                            $("#scroll").addClass("gone");
+                        } else {
+                            $("#scroll").removeClass("gone");
                         }
 					})
 					.addTo(controller);
@@ -64,7 +77,6 @@
                     document.body.scrollLeft -= 30;
                 else
                     document.body.scrollLeft += 30;
-
                 return false;
             }
             document.body.addEventListener("mousewheel", mouseWheelEvt);
