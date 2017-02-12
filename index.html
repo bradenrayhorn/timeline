@@ -1,8 +1,8 @@
 <html>
     <head>
         <title>Timeline</title>
-        <link rel="stylesheet" href="style/main.css?v=0.37115900 1486850931" />
-        <link href="https://fonts.googleapis.com/css?family=Sahitya:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="style/main.css?v=0.39891200 1486870660" />
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:500|Sahitya:700" rel="stylesheet">
         <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
@@ -10,29 +10,30 @@
     <body>
         <img src="images/one.jpg" class="bg start" id="img">
         <img src="images/two.jpg" class="bg" id="img2">
+        <div class="dark" id="dark"></div>
         <div class="front">
             <div class="dates">
-                <div class='entry' id='t1000'><div class='time'>1000<span> B.C.</span></div>
+                <div class='entry small' id='t1000'><div class='time small' id='t1000-time'>1000<span id='t1000-label' class='small'> B.C.</span></div>
         <div class='content'>Something happened here</div>
         <div class='content'>Line 2</div>
-        <div class='content'>&nbsp;</div>
-        </div><div class='entry' id='t900'><div class='time'>900<span> </span></div>
+        <div class='content'>More stuff</div>
+        </div><div class='entry small' id='t900'><div class='time small' id='t900-time'>900<span id='t900-label' class='small'> </span></div>
         <div class='content'>Something happened here</div>
         <div class='content'>&nbsp;</div>
         <div class='content'>Line 3</div>
-        </div><div class='entry' id='t800'><div class='time'>800<span> </span></div>
+        </div><div class='entry small' id='t800'><div class='time small' id='t800-time'>800<span id='t800-label' class='small'> </span></div>
         <div class='content'>Something happened here</div>
         <div class='content'>&nbsp;</div>
         <div class='content'>Line 3</div>
-        </div><div class='entry' id='t700'><div class='time'>700<span> </span></div>
+        </div><div class='entry small' id='t700'><div class='time small' id='t700-time'>700<span id='t700-label' class='small'> </span></div>
         <div class='content'>Something happened here</div>
         <div class='content'>&nbsp;</div>
         <div class='content'>Line 3</div>
-        </div><div class='entry' id='t600'><div class='time'>600<span> </span></div>
+        </div><div class='entry small' id='t600'><div class='time small' id='t600-time'>600<span id='t600-label' class='small'> </span></div>
         <div class='content'>Something happened here</div>
         <div class='content'>&nbsp;</div>
         <div class='content'>Line 3</div>
-        </div><div class='entry' id='t500'><div class='time'>500<span> </span></div>
+        </div><div class='entry small' id='t500'><div class='time small' id='t500-time'>500<span id='t500-label' class='small'> </span></div>
         <div class='content'>Something happened here</div>
         <div class='content'>&nbsp;</div>
         <div class='content'>Line 3</div>
@@ -46,6 +47,7 @@
         <script>
             // States: 1 (inside) 0 (outside)
             var controller = new ScrollMagic.Controller({vertical: false});
+            var curTime = 1000;
             new ScrollMagic.Scene({triggerElement: "#t600"})
 					//.addIndicators()
                     .on("enter leave", function (e) {
@@ -57,14 +59,95 @@
                         }
 					})
 					.addTo(controller);
+            
+        new ScrollMagic.Scene({triggerElement: '#t1000', duration: 350})
+            .on('enter', function () {
+                $('#t1000').removeClass('small');
+                $('#t1000-time').removeClass('small');
+                $('#t1000-label').removeClass('small');
+            })
+            .on('leave', function () {
+                $('#t1000').addClass('small');
+                $('#t1000-time').addClass('small');
+                $('#t1000-label').addClass('small');
+            })
+            .addTo(controller);
+        
+        new ScrollMagic.Scene({triggerElement: '#t900', duration: 350})
+            .on('enter', function () {
+                $('#t900').removeClass('small');
+                $('#t900-time').removeClass('small');
+                $('#t900-label').removeClass('small');
+            })
+            .on('leave', function () {
+                $('#t900').addClass('small');
+                $('#t900-time').addClass('small');
+                $('#t900-label').addClass('small');
+            })
+            .addTo(controller);
+        
+        new ScrollMagic.Scene({triggerElement: '#t800', duration: 350})
+            .on('enter', function () {
+                $('#t800').removeClass('small');
+                $('#t800-time').removeClass('small');
+                $('#t800-label').removeClass('small');
+            })
+            .on('leave', function () {
+                $('#t800').addClass('small');
+                $('#t800-time').addClass('small');
+                $('#t800-label').addClass('small');
+            })
+            .addTo(controller);
+        
+        new ScrollMagic.Scene({triggerElement: '#t700', duration: 350})
+            .on('enter', function () {
+                $('#t700').removeClass('small');
+                $('#t700-time').removeClass('small');
+                $('#t700-label').removeClass('small');
+            })
+            .on('leave', function () {
+                $('#t700').addClass('small');
+                $('#t700-time').addClass('small');
+                $('#t700-label').addClass('small');
+            })
+            .addTo(controller);
+        
+        new ScrollMagic.Scene({triggerElement: '#t600', duration: 350})
+            .on('enter', function () {
+                $('#t600').removeClass('small');
+                $('#t600-time').removeClass('small');
+                $('#t600-label').removeClass('small');
+            })
+            .on('leave', function () {
+                $('#t600').addClass('small');
+                $('#t600-time').addClass('small');
+                $('#t600-label').addClass('small');
+            })
+            .addTo(controller);
+        
+        new ScrollMagic.Scene({triggerElement: '#t500', duration: 350})
+            .on('enter', function () {
+                $('#t500').removeClass('small');
+                $('#t500-time').removeClass('small');
+                $('#t500-label').removeClass('small');
+            })
+            .on('leave', function () {
+                $('#t500').addClass('small');
+                $('#t500-time').addClass('small');
+                $('#t500-label').addClass('small');
+            })
+            .addTo(controller);
+        
             new ScrollMagic.Scene({triggerElement: "#t1000"})
 					//.addIndicators()
                     .on("enter leave", function (e) {
                         var state = (e.type == "enter" ? 1 : 0);
                         if(state == 1) {
                             $("#scroll").addClass("gone");
+                            $("#dark").addClass("on");
                         } else {
                             $("#scroll").removeClass("gone");
+                            $("#dark").removeClass("on");
                         }
 					})
 					.addTo(controller);
@@ -80,6 +163,10 @@
                 return false;
             }
             document.body.addEventListener("mousewheel", mouseWheelEvt);
+            // Reload
+            window.onbeforeunload = function () {
+                window.scrollTo(0, 0);
+            }
         </script>
     </body>
 </html>

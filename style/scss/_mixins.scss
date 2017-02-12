@@ -3,3 +3,9 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+@mixin transition($object, $time) {
+    -webkit-transition: $object $time;
+    -moz-transition: $object $time;
+    -o-transition: $object $time;
+    transition: $object $time;
+}
