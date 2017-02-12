@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Timeline</title>
-        <link rel="stylesheet" href="style/main.css?v=0.49384400 1486873338" />
+        <link rel="stylesheet" href="style/main.css?v=0.81407700 1486873572" />
         <link rel="stylesheet" href="style/flags.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500|Sahitya:700" rel="stylesheet">
@@ -13,7 +13,7 @@
         <img src="images/one.jpg" class="bg start" id="img">
         <img src="images/two.jpg" class="bg" id="img2">
         <div class="dark" id="dark"></div>
-        <div class="countries">
+        <div class="countries" id="flags">
             <div class="country"><img src="images/blank.gif" class="flag flag-es" /></div>
             <div class="country"><img src="images/blank.gif" class="flag flag-ar" /></div>
             <div class="country"><img src="images/blank.gif" class="flag flag-mx" /></div>
@@ -152,9 +152,11 @@
                         if(state == 1) {
                             $("#scroll").addClass("gone");
                             $("#dark").addClass("on");
+                            $("#flags").addClass("on");
                         } else {
                             $("#scroll").removeClass("gone");
                             $("#dark").removeClass("on");
+                            $("#flags").removeClass("on");
                         }
 					})
 					.addTo(controller);

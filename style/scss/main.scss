@@ -106,14 +106,19 @@ body, html {
 .countries {
     position: fixed;
     top: 214px;
-    left: 0;
+    left: -32px;
     z-index: 10000;
+    @include transition(all, .5s);
+    &.on {
+        left: 0;
+    }
     & .country {
         height: calc((100vh - 150px - 80px) / 3);
         display: flex;
         color: white;
         align-items: center;
         padding-left: 5px;
+        width: 32px;
     }
 }
 .scroll {
