@@ -1,9 +1,8 @@
 <html>
     <head>
         <title>Timeline</title>
-        <link rel="stylesheet" href="style/main.css?v=0.24651200 1486874988" />
+        <link rel="stylesheet" href="style/main.css?v=0.19137300 1486878582" />
         <link rel="stylesheet" href="style/flag-icon.min.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css?family=Quicksand:500|Sahitya:700" rel="stylesheet">
         <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
@@ -17,6 +16,11 @@
             <div class="country"><span class="flag-icon flag-icon-es"></span></div>
             <div class="country"><span class="flag-icon flag-icon-ar"></span></div>
             <div class="country"><span class="flag-icon flag-icon-mx"></span></div>
+        </div>
+        <div class="countries text" id="names">
+            <div class="country text">Spain</div>
+            <div class="country text">Argentina</div>
+            <div class="country text">Mexico</div>
         </div>
         <div class="front">
             <div class="dates">
@@ -153,10 +157,12 @@
                             $("#scroll").addClass("gone");
                             $("#dark").addClass("on");
                             $("#flags").addClass("on");
+                            $("#names").addClass("off");
                         } else {
                             $("#scroll").removeClass("gone");
                             $("#dark").removeClass("on");
                             $("#flags").removeClass("on");
+                            $("#names").removeClass("off");
                         }
 					})
 					.addTo(controller);
