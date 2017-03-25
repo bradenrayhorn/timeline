@@ -3,14 +3,21 @@
         <title>Timeline</title>
         <link rel="stylesheet" href="style/main.css?v={{rand}}" />
         <link rel="stylesheet" href="style/flag-icon.min.css" />
-        <link href="https://fonts.googleapis.com/css?family=Quicksand:500|Sahitya:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Sahitya:700" rel="stylesheet">
         <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.2/plugins/debug.addIndicators.min.js"></script>
     </head>
     <body>
-        <img src="images/one.jpg" class="bg start" id="img">
-        <img src="images/two.jpg" class="bg" id="img2">
+        <script type="text/javascript" src="scripts/jquery.min.js"></script>
+        <div class="loader on" id="loader">Loading...</div>
+        <script>
+            window.onload = function() {
+                $("#loader").removeClass("on");    
+            };
+        </script>
+        <img src="images/0.jpg" class="bg start" id="img">
+        {{images}}
         <div class="dark" id="dark"></div>
         <div class="countries" id="flags">
             <div class="country"><span class="flag-icon flag-icon-es"></span></div>
@@ -29,29 +36,18 @@
         </div>
         <div class="scroll" id="scroll"><i class="fa fa-chevron-right fa-2x"></i></div>
         <!--Javascript-->
-        <script type="text/javascript" src="scripts/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/tweenmax.js"></script>
         <script>
             // States: 1 (inside) 0 (outside)
             var controller = new ScrollMagic.Controller({vertical: false});
             var curTime = 1000;
-            new ScrollMagic.Scene({triggerElement: "#t600"})
-					//.addIndicators()
-                    .on("enter leave", function (e) {
-                        var state = (e.type == "enter" ? 1 : 0);
-                        if(state == 1) {
-                            $("#img2").css("opacity", "1");
-                        } else {
-                            $("#img2").css("opacity", "0");
-                        }
-					})
-					.addTo(controller);
+            {{imgScript}}
             {{script}}
-            new ScrollMagic.Scene({triggerElement: "#t1000"})
+            new ScrollMagic.Scene({triggerElement: "#t1400bc"})
 					//.addIndicators()
                     .on("enter leave", function (e) {
-                        var state = (e.type == "enter" ? 1 : 0);
-                        if(state == 1) {
+                        var state = e.type === "enter" ? 1 : 0;
+                        if(state === 1) {
                             $("#scroll").addClass("gone");
                             $("#dark").addClass("on");
                             $("#flags").addClass("on");
@@ -74,12 +70,12 @@
                 else
                     document.body.scrollLeft += 30;
                 return false;
-            }
+            };
             document.body.addEventListener("mousewheel", mouseWheelEvt);
             // Reload
             window.onbeforeunload = function () {
                 window.scrollTo(0, 0);
-            }
+            };
         </script>
     </body>
 </html>

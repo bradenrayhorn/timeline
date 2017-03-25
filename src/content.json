@@ -1,44 +1,191 @@
 [
     {
-        "date": "1000",
+        "date": "1400",
         "suffix": "B.C.",
-        "1": "Something happened here",
-        "2": "Line 2",
-        "3": "More stuff"
+        "1": "",
+        "2": "",
+        "3": "Olmecs arrived near Mexico"
     },
     {
         "date": "900",
         "suffix": "",
-        "1": "Something happened here",
+        "1": "First Greek colonies founded",
         "2": "",
-        "3": "Line 3"
+        "3": "First Olmec city abandoned and replaced by La Venta"
     },
     {
         "date": "800",
         "suffix": "",
-        "1": "Something happened here",
+        "1": "",
         "2": "",
-        "3": "Line 3"
+        "3": "First Mayan cities developed"
+    },
+    {
+        "date": "600",
+        "suffix": "", 
+        "1": "The Carthaginians arrived",
+        "2": "",
+        "3": ""
+    },
+    {
+        "date": "400",
+        "suffix": "",
+        "1": "",
+        "2": "",
+        "3": "La Venta was abandoned and the Olmecs started to decline"
+    },
+    {
+        "date": "200",
+        "suffix": "B.C.",
+        "1": "Romans began invading the peninsula",
+        "2": "",
+        "3": ""
+    },
+    {
+        "date": "100",
+        "suffix": "B.C.",
+        "1": "",
+        "2": "",
+        "3": "Teotihuacan was established by the Mayans"
+    },
+    {
+        "date": "0",
+        "suffix": "",
+        "1": "Romans had complete control over the peninsula",
+        "2": "",
+        "3": "Many major Mayan cities were abandoned"
+    },
+    {
+        "date": "100",
+        "suffix": "A.D.",
+        "1": "Rome allowed people on the peninsula to become citizens",
+        "2": "",
+        "3": ""
+    },
+    {
+        "date": "400",
+        "suffix": "",
+        "1": "Roman empire declined and the Germanic Visigoths gained control",
+        "2": "",
+        "3": "Mayans created their calendar"
     },
     {
         "date": "700",
         "suffix": "",
-        "1": "Something happened here",
+        "1": "Visigoths lost the peninsula to Muslim invaders",
         "2": "",
-        "3": "Line 3"
+        "3": ""
     },
     {
-        "date": "600",
+        "date": "800",
         "suffix": "",
-        "1": "Something happened here",
+        "1": "",
         "2": "",
-        "3": "Line 3"
+        "3": "Mayan civilization collapses"
     },
     {
-        "date": "500",
+        "date": "900",
         "suffix": "",
-        "1": "Something happened here",
+        "1": "Muslim power was at its greatest height",
         "2": "",
-        "3": "Line 3"
-    }
+        "3": ""
+    },
+    {
+        "date": "1000",
+        "suffix": "",
+        "1": "Al-Mansur sacked Barcelona",
+        "2": "",
+        "3": ""
+    },
+    {
+        "date": "1200",
+        "suffix": "",
+        "1": "Only one Muslim kingdom remained",
+        "2": "",
+        "3": "Early Aztecs migrate to central Mexico"
+    },
+    {
+        "date": "1300",
+        "suffix": "",
+        "1": "",
+        "2": "",
+        "3": "Aztecs establish Tenochtitlan"
+    },
+    {
+        "date": "1400",
+        "suffix": "",
+        "1": "",
+        "2": "",
+        "3": "Aztecs and two other kingdoms create the Triple Alliance"
+    },
+    {
+        "date": "1500",
+        "suffix": "",
+        "1": "Isabella and Ferdinand took power and drove out the Muslims",
+        "2": "The Spanish arrived and took control of the area",
+        "3": "Cortes arrives and conquered the Aztec capital"
+    },
+    {
+        "date": "1600",
+        "suffix": "",
+        "1": "The Anglo-Spanish War occurred, along with a war with France",
+        "2": "Settlements were established, and became part of the Viceroyalty of Peru",
+        "3": "Mexico had the first first primary school, university, and printing press of the Americas"
+    },
+    {
+        "date": "1700",
+        "suffix": "",
+        "1": "Charles II's death brought an end to the Habsburg dynasty",
+        "2": "",
+        "3": ""
+    },
+    {
+        "date": "1800",
+        "suffix": "",
+        "1": "Napolean placed his brother Joseph on the throne of Spain",
+        "2": "Argentina won its independence from Spain",
+        "3": "Independence was gained from Spain and Mexico was formed"
+    },
+    {
+        "date": "1850",
+        "suffix": "",
+        "1": "A republic was formed, but soon failed",
+        "2": "The Argentine Constitution was written and is still in use",
+        "3": "The Mexican-American war took place"
+    },
+    {
+        "date": "1900",
+        "suffix": "",
+        "1": "The remainder of Spain's colonies were lost in the Spanish-American war",
+        "2": "Border disputes were resolved",
+        "3": "The Mexican revolution started"
+    },
+    {
+        "date": "1925",
+        "suffix": "",
+        "1": "The second Spanish Republic was formed, and also failed",
+        "2": "The infamous decade occurred, a time of fraud and corruption",
+        "3": "The Cristero War took place, a rebellion against anti-Catholicism"
+    },
+    {
+        "date": "1950",
+        "suffix": "",
+        "1": "Dictator Francisco Franco killed an estimated 200,000 of his opposers",
+        "2": "Many coups were attempted, and the government was fragile",
+        "3": "Major economic growth occurred, known as the Mexican Economic Miracle"
+    },
+    {
+        "date": "1975",
+        "suffix": "",
+        "1": "Dictator Franco died and Spain transitioned to a more democratic government",
+        "2": "A new era of democracy began, led by Raul Alfonsin",
+        "3": "An 8.1 magnitude earthquake hit in Michoacan, damaging Mexico City"
+    },
+    {
+        "date": "2000",
+        "suffix": "",
+        "1": "The Euro was adopted as the currency, replacing the peseta",
+        "2": "The Argentine Great Depression occurred",
+        "3": "Mexico joined NAFTA with Canada and the U.S."
+    }  
 ]
